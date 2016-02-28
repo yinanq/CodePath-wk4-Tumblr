@@ -82,9 +82,30 @@ class TabBarViewController: UIViewController {
     }
     
     @IBAction func composeButtonTouchUpInside(sender: AnyObject) {
-        //
+        performSegueWithIdentifier("composeSegue", sender: nil)
     }
     
+    // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Modal-Transition#step-3-define-the-transition-variable
+    var fadeTransition: FadeTransition!
+    
+    // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Modal-Transition#step-4-setup-the-prepareforsegue-method
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        let destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 0.3
+    }
 
     /*
     // MARK: - Navigation

@@ -46,7 +46,6 @@
                                         <state key="normal" image="compose_button"/>
                                         <connections>
                                             <action selector="composeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycL-kD-tvs"/>
-                                            <segue destination="UET-iG-MHb" kind="modal" id="8gK-AD-qUW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vdK-p4-o4I">
@@ -84,6 +83,7 @@
                         <outletCollection property="tabBarButtons" destination="ZJX-vx-lzQ" collectionClass="NSMutableArray" id="vYo-Lv-zHq"/>
                         <outletCollection property="tabBarButtons" destination="vdK-p4-o4I" collectionClass="NSMutableArray" id="loV-OO-FAT"/>
                         <outletCollection property="tabBarButtons" destination="e6y-kx-sTP" collectionClass="NSMutableArray" id="1G0-9x-nxp"/>
+                        <segue destination="UET-iG-MHb" kind="modal" identifier="composeSegue" id="GI0-of-EDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,6 +163,10 @@
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="CIq-rX-hrg">
                                             <rect key="frame" x="10" y="200" width="300" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="gaj-Nk-HG5" appends="YES" id="XJf-gD-dEy"/>
+                                            </connections>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jMR-1G-EcU">
                                             <rect key="frame" x="10" y="288" width="151" height="44"/>
@@ -186,6 +190,11 @@
                 <tapGestureRecognizer id="Vca-LN-i9k">
                     <connections>
                         <action selector="backgroundTapGesture:" destination="eKu-bE-sQU" id="JbT-G6-Ryt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gaj-Nk-HG5">
+                    <connections>
+                        <action selector="loginformTapGesture:" destination="eKu-bE-sQU" id="vMV-8t-7EW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

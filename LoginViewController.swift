@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func loginformTapGesture(sender: AnyObject) {
+        // do nothing. this tap gesture recognizer is here to cover area where backgroundTapGesture should not work.
+    }
 
     /*
     // MARK: - Navigation
