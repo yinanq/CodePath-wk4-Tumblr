@@ -11,7 +11,7 @@ Stories completed:
 * [x] Optional: Login button should show animate the login form over the view controller.
 * [x] Optional: Discover bubble should bob up and down [until] the SearchViewController is tapped.
 * [x] Self-added: Blur effect background for login modal and compose modal.
-* [x] Self-added: Discover bubble resumes animation when app is closed (not quit) and reopened. (with help from iOS engineer from on using NSNotifcation in view controller and AppDelegate.swift)
+* [x] Self-added: Discover bubble resumes animation when app is closed (not quit) and reopened. (with help from iOS engineer friend on using NSNotifcation in view controller and AppDelegate.swift)
 
 GIF walkthrough (using LiceCap):
 
