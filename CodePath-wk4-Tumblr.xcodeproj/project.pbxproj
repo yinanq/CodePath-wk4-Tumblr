@@ -14,6 +14,15 @@
 		E10B64C01C80307F004668E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10B64BE1C80307F004668E6 /* LaunchScreen.storyboard */; };
 		E10B64CB1C80307F004668E6 /* CodePath_wk4_TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64CA1C80307F004668E6 /* CodePath_wk4_TumblrTests.swift */; };
 		E10B64D61C80307F004668E6 /* CodePath_wk4_TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64D51C80307F004668E6 /* CodePath_wk4_TumblrUITests.swift */; };
+		E10B64E41C80364E004668E6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64E31C80364E004668E6 /* TabBarViewController.swift */; };
+		E10B64E61C825D4F004668E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64E51C825D4F004668E6 /* HomeViewController.swift */; };
+		E10B64E81C825D73004668E6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64E71C825D73004668E6 /* SearchViewController.swift */; };
+		E10B64EA1C825D8B004668E6 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64E91C825D8B004668E6 /* ComposeViewController.swift */; };
+		E10B64EC1C825D9B004668E6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64EB1C825D9B004668E6 /* AccountViewController.swift */; };
+		E10B64EE1C825DA7004668E6 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64ED1C825DA7004668E6 /* TrendingViewController.swift */; };
+		E10B64F11C82A272004668E6 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64EF1C82A272004668E6 /* BaseTransition.swift */; };
+		E10B64F21C82A272004668E6 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64F01C82A272004668E6 /* FadeTransition.swift */; };
+		E10B64F41C82A7C0004668E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B64F31C82A7C0004668E6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		E10B64D11C80307F004668E6 /* CodePath-wk4-TumblrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodePath-wk4-TumblrUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B64D51C80307F004668E6 /* CodePath_wk4_TumblrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePath_wk4_TumblrUITests.swift; sourceTree = "<group>"; };
 		E10B64D71C80307F004668E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E10B64E31C80364E004668E6 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E10B64E51C825D4F004668E6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E10B64E71C825D73004668E6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E10B64E91C825D8B004668E6 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		E10B64EB1C825D9B004668E6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		E10B64ED1C825DA7004668E6 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		E10B64EF1C82A272004668E6 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		E10B64F01C82A272004668E6 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		E10B64F31C82A7C0004668E6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,7 @@
 		E10B64A91C80307F004668E6 = {
 			isa = PBXGroup;
 			children = (
+				E10B64F31C82A7C0004668E6 /* LoginViewController.swift */,
 				E10B64B41C80307F004668E6 /* CodePath-wk4-Tumblr */,
 				E10B64C91C80307F004668E6 /* CodePath-wk4-TumblrTests */,
 				E10B64D41C80307F004668E6 /* CodePath-wk4-TumblrUITests */,
@@ -100,6 +119,14 @@
 				E10B64B51C80307F004668E6 /* AppDelegate.swift */,
 				E10B64B71C80307F004668E6 /* ViewController.swift */,
 				E10B64B91C80307F004668E6 /* Main.storyboard */,
+				E10B64E71C825D73004668E6 /* SearchViewController.swift */,
+				E10B64E91C825D8B004668E6 /* ComposeViewController.swift */,
+				E10B64EB1C825D9B004668E6 /* AccountViewController.swift */,
+				E10B64ED1C825DA7004668E6 /* TrendingViewController.swift */,
+				E10B64E51C825D4F004668E6 /* HomeViewController.swift */,
+				E10B64E31C80364E004668E6 /* TabBarViewController.swift */,
+				E10B64EF1C82A272004668E6 /* BaseTransition.swift */,
+				E10B64F01C82A272004668E6 /* FadeTransition.swift */,
 				E10B64BC1C80307F004668E6 /* Assets.xcassets */,
 				E10B64BE1C80307F004668E6 /* LaunchScreen.storyboard */,
 				E10B64C11C80307F004668E6 /* Info.plist */,
@@ -259,8 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10B64E81C825D73004668E6 /* SearchViewController.swift in Sources */,
+				E10B64EE1C825DA7004668E6 /* TrendingViewController.swift in Sources */,
 				E10B64B81C80307F004668E6 /* ViewController.swift in Sources */,
+				E10B64EC1C825D9B004668E6 /* AccountViewController.swift in Sources */,
+				E10B64F11C82A272004668E6 /* BaseTransition.swift in Sources */,
+				E10B64E41C80364E004668E6 /* TabBarViewController.swift in Sources */,
+				E10B64F21C82A272004668E6 /* FadeTransition.swift in Sources */,
+				E10B64EA1C825D8B004668E6 /* ComposeViewController.swift in Sources */,
 				E10B64B61C80307F004668E6 /* AppDelegate.swift in Sources */,
+				E10B64E61C825D4F004668E6 /* HomeViewController.swift in Sources */,
+				E10B64F41C82A7C0004668E6 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
