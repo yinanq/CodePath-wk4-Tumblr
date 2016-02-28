@@ -38,6 +38,10 @@ class TabBarViewController: UIViewController {
         
         // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar#step-10-set-the-initial-tab-when-the-app-starts
         tabBarButtonTouchUpInside(tabBarButtons[selectedTab])
+        
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.Autoreverse, .Repeat, .CurveEaseInOut], animations: { () -> Void in
+            self.annoyingTutorial.frame.origin.y -= 15
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +80,11 @@ class TabBarViewController: UIViewController {
         contentView.addSubview(currentViewController.view)
         currentViewController.didMoveToParentViewController(self)
     }
+    
+    @IBAction func composeButtonTouchUpInside(sender: AnyObject) {
+        //
+    }
+    
 
     /*
     // MARK: - Navigation

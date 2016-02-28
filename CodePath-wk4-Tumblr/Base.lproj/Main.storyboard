@@ -45,6 +45,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
                                         <connections>
+                                            <action selector="composeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycL-kD-tvs"/>
                                             <segue destination="UET-iG-MHb" kind="modal" id="8gK-AD-qUW"/>
                                         </connections>
                                     </button>
@@ -152,19 +153,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="CIq-rX-hrg">
-                                <rect key="frame" x="10" y="200" width="300" height="132"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jMR-1G-EcU">
-                                <rect key="frame" x="10" y="288" width="151" height="44"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" id="AD5-VX-N0p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="cancelButtonTouchUpInside:" destination="eKu-bE-sQU" eventType="touchUpInside" id="lFm-RI-21M"/>
-                                </connections>
-                            </button>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N0N-ch-dSc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="CIq-rX-hrg">
+                                            <rect key="frame" x="10" y="200" width="300" height="132"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jMR-1G-EcU">
+                                            <rect key="frame" x="10" y="288" width="151" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="cancelButtonTouchUpInside:" destination="eKu-bE-sQU" eventType="touchUpInside" id="lFm-RI-21M"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470588235294" green="0.25882352941176467" blue="0.32941176470588235" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Vca-LN-i9k" appends="YES" id="885-IQ-aYE"/>
@@ -208,6 +219,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="jwJ-Tr-xTj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nevermind" id="SgI-XT-b4B">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -244,9 +259,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470588235294" green="0.25882352941176467" blue="0.32941176470588235" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="jwJ-Tr-xTj" id="fUD-wj-8Ut"/>
                         <outlet property="chatButton" destination="ZUG-bT-Jf0" id="8Q6-01-ABc"/>
                         <outlet property="linkButton" destination="mWg-JX-H9j" id="bUs-DY-iWL"/>
                         <outlet property="photoButton" destination="XYS-Fe-f9J" id="Wzh-DO-8Ft"/>

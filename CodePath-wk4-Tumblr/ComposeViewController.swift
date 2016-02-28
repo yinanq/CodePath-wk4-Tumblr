@@ -17,10 +17,15 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var videoButton: UIImageView!
     @IBOutlet weak var linkButton: UIImageView!
     
+    @IBOutlet weak var blurView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let effectView = UIVisualEffectView(effect: effect)
+        effectView.frame = view.frame
+        blurView.addSubview(effectView)
     }
 
     override func viewWillAppear(animated: Bool) {
