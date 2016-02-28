@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UIViewController, UIApplicationDelegate {
     // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar
     
     @IBOutlet weak var contentView: UIView!
@@ -22,10 +22,17 @@ class TabBarViewController: UIViewController {
     
     var selectedTab = 0
     
+    @IBOutlet weak var annoyingTutorial: UIImageView!
     var noMoreAnnoyingTutorial = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // with help from Kenan
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "willResumeAnimation:", name:"willResumeAnimation", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "resumeAnimation:", name:"resumeAnimation", object: nil)
+        
+        print("view did load")
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -39,17 +46,13 @@ class TabBarViewController: UIViewController {
         // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar#step-10-set-the-initial-tab-when-the-app-starts
         tabBarButtonTouchUpInside(tabBarButtons[selectedTab])
         
-        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.Autoreverse, .Repeat, .CurveEaseInOut], animations: { () -> Void in
-            self.annoyingTutorial.frame.origin.y -= 15
-            }, completion: nil)
+        animateBounce(annoyingTutorial)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var annoyingTutorial: UIImageView!
     
     @IBAction func tabBarButtonTouchUpInside(sender: UIButton) {
         let lastSelectedTab = selectedTab
@@ -106,7 +109,25 @@ class TabBarViewController: UIViewController {
         // Adjust the transition duration. (seconds)
         fadeTransition.duration = 0.3
     }
-
+    
+    // my first function in Swift
+    func animateBounce (animatedImage: UIImageView) {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.Autoreverse, .Repeat, .CurveEaseInOut], animations: { () -> Void in
+            animatedImage.frame.origin.y -= 15
+            }, completion: nil)
+    }
+    
+    // with help from Kenan
+    @objc func willResumeAnimation(notification: NSNotification){
+        annoyingTutorial.hidden = true
+        print("hide")
+    }
+    @objc func resumeAnimation(notification: NSNotification){
+        annoyingTutorial.frame.origin.y = 452 
+        annoyingTutorial.hidden = false
+        animateBounce(annoyingTutorial)
+    }
+    
     /*
     // MARK: - Navigation
 
