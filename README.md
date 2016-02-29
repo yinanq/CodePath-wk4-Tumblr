@@ -1,7 +1,7 @@
 # CodePath iOS for Designers week4 assignment 
 http://courses.codepath.com/courses/ios_for_designers/unit/4#!assignment
 
-Hours spent: 8
+Hours spent: 11
 
 Stories completed:
 
