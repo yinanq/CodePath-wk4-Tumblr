@@ -45,8 +45,6 @@ class TabBarViewController: UIViewController, UIApplicationDelegate {
         
         // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar#step-10-set-the-initial-tab-when-the-app-starts
         tabBarButtonTouchUpInside(tabBarButtons[selectedTab])
-        
-        animateBounce(annoyingTutorial)
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,6 +110,8 @@ class TabBarViewController: UIViewController, UIApplicationDelegate {
     
     // my first function in Swift
     func animateBounce (animatedImage: UIImageView) {
+        annoyingTutorial.frame.origin.y = 452
+        annoyingTutorial.hidden = false
         UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.Autoreverse, .Repeat, .CurveEaseInOut], animations: { () -> Void in
             animatedImage.frame.origin.y -= 15
             }, completion: nil)
@@ -120,12 +120,9 @@ class TabBarViewController: UIViewController, UIApplicationDelegate {
     // with help from Kenan
     @objc func willResumeAnimation(notification: NSNotification){
         annoyingTutorial.hidden = true
-        print("hide")
     }
     @objc func resumeAnimation(notification: NSNotification){
         if noMoreAnnoyingTutorial == false {
-            annoyingTutorial.frame.origin.y = 452
-            annoyingTutorial.hidden = false
             animateBounce(annoyingTutorial)
         }
     }
