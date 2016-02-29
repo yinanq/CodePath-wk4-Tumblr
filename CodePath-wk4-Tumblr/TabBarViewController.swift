@@ -123,9 +123,11 @@ class TabBarViewController: UIViewController, UIApplicationDelegate {
         print("hide")
     }
     @objc func resumeAnimation(notification: NSNotification){
-        annoyingTutorial.frame.origin.y = 452 
-        annoyingTutorial.hidden = false
-        animateBounce(annoyingTutorial)
+        if noMoreAnnoyingTutorial == false {
+            annoyingTutorial.frame.origin.y = 452
+            annoyingTutorial.hidden = false
+            animateBounce(annoyingTutorial)
+        }
     }
     
     /*
