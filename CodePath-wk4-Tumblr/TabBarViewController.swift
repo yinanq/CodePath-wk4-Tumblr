@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController, UIApplicationDelegate {
+class TabBarViewController: UIViewController {
     // https://github.com/codepath/ios_guides/wiki/Creating-a-Custom-Tab-Bar
     
     @IBOutlet weak var contentView: UIView!
